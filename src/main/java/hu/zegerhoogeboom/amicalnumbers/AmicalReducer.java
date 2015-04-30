@@ -13,7 +13,6 @@ import java.util.Map;
 public class AmicalReducer  extends Reducer<LongWritable, LongWritable, LongWritable, LongWritable>
 {
 	static Map<LongWritable, LongWritable> results = new HashMap<LongWritable, LongWritable>();
-
 	private LongWritable result = new LongWritable();
 
 	@Override

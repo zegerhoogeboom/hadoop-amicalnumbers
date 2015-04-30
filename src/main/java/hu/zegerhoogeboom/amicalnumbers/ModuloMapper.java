@@ -8,9 +8,7 @@ import java.io.IOException;
 /**
  * @author Zeger Hoogeboom
  */
-public class ModuloMapper extends Mapper<LongWritable, Text,
-		LongWritable,
-		LongWritable>
+public class ModuloMapper extends Mapper<LongWritable, Text, LongWritable, LongWritable>
 {
 
 	@Override

@@ -12,11 +12,11 @@ import org.apache.hadoop.util.ToolRunner;
 /**
  * @author Zeger Hoogeboom
  */
-public class MyJob extends Configured implements Tool
+public class AmicalNumbersJob extends Configured implements Tool
 {
 	public int run(String[] args) throws Exception {
 		Job job = Job.getInstance(getConf());
-		job.setJarByClass(MyJob.class);
+		job.setJarByClass(AmicalNumbersJob.class);
 		job.setJobName(getClass().getSimpleName());
 
 		FileInputFormat.addInputPath(job, new Path(args[0]));
@@ -33,7 +33,7 @@ public class MyJob extends Configured implements Tool
 	}
 
 	public static void main(String[] args) throws Exception {
-		int rc = ToolRunner.run(new MyJob(), args);
+		int rc = ToolRunner.run(new AmicalNumbersJob(), args);
 		System.exit(rc);
 	}
 }
